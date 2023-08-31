@@ -1,17 +1,17 @@
 # Esphome native api
 This library implements client for [Esphome Native APi](https://esphome.io/components/api.html).
 
-#### This library rewrite for [node-red-contrib-esphome](https://flows.nodered.org/node/node-red-contrib-esphome), original library [esphome-native-api](https://github.com/Nafaya/esphome-native-api) by @Nafaya
+#### This library rewrite for [node-red-contrib-esphome](https://flows.nodered.org/node/node-red-contrib-esphome), original library [esphome-native-api](https://github.com/twocolors/esphome-native-api) by @2colors
 
 ## Installation
 
 ```bash
-$ npm i @2colors/esphome-native-api
+$ npm i ballesdev/esphome-native-api
 ```
 ## Synopsis
 ### Device info and list entities
 ```javascript
-const { Client } = require('@2colors/esphome-native-api');
+const { Client } = require('ballesdev/esphome-native-api');
 const client = new Client({
     host: '<esp host or ip>',
     port: 6053,
@@ -42,7 +42,7 @@ client.on('error', (error) => console.log(error));
 
 ### Discovery
 ```javascript
-const { Discovery } = require('@2colors/esphome-native-api');
+const { Discovery } = require('ballesdev/esphome-native-api');
 Discovery().then(results => {
     console.log(results);
     /*
@@ -64,7 +64,7 @@ Discovery().then(results => {
 ```
 
 ```javascript
-const { Discovery } = require('@2colors/esphome-native-api');
+const { Discovery } = require('ballesdev/esphome-native-api');
 const discovery = new Discovery();
 discovery.on('info', console.log);
 /*
@@ -85,7 +85,7 @@ discovery.run();
 
 ### Logging
 ```javascript
-const { Client } = require('@2colors/esphome-native-api');
+const { Client } = require('ballesdev/esphome-native-api');
 const client = new Client({
     host: '<esp host or ip>',
     port: 6053,
@@ -102,7 +102,7 @@ client.on('logs', ({ message }) => {
 #### !!! Importan, if you want use on Windows must disable/uninstall Bonjour (Apple) !!!
 
 ```javascript
-const { Discovery } = require('@2colors/esphome-native-api');
+const { Discovery } = require('ballesdev/esphome-native-api');
 const discovery = new Discovery(options);
 ```
 
@@ -116,7 +116,7 @@ const discovery = new Discovery(options);
 - `reuseAddr` - optional. Default - `true`. Set the reuseAddr option when creating the socket (requires node >=0.11.13)
 
 ```javascript
-const { Discovery } = require('@2colors/esphome-native-api');
+const { Discovery } = require('ballesdev/esphome-native-api');
 Discovery(options).then(console.log)
 ```
 
@@ -127,7 +127,7 @@ Discovery(options).then(console.log)
 ### Client
 More frienly layer over the [Connection](#Connection)
 ```javascript
-const { Client } = require('@2colors/esphome-native-api');
+const { Client } = require('ballesdev/esphome-native-api');
 const client = new Client({
     clearSession = false,
     initializeDeviceInfo = true,
@@ -282,7 +282,7 @@ Only base functionality
 
 ### Connection
 ```javascript
-const { Connection } = require('@2colors/esphome-native-api');
+const { Connection } = require('ballesdev/esphome-native-api');
 const connection = new Connection({
     port = 6053,
     host,
