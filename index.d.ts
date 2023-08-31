@@ -1,4 +1,4 @@
-declare module "@2colors/esphome-native-api" {
+declare module "@BallesDev/esphome-native-api" {
     export type HelloResponse = {
         apiVersionMajor: number;
         apiVersionMinor: number;
