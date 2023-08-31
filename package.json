@@ -1,5 +1,5 @@
 {
-  "name": "@ballesdev/esphome-native-api",
+  "name": "@balles.dev/esphome-native-api",
   "version": "1.0.0",
   "license": "MIT",
   "description": "esphome native api client",
@@ -25,5 +25,9 @@
     "@richardhopton/noise-c.wasm": "^0.5.0",
     "google-protobuf": "^3.21.2",
     "multicast-dns": "^7.2.5"
+  },
+  "types": "./index.d.ts",
+  "directories": {
+    "lib": "lib"
   }
 }
