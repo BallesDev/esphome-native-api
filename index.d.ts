@@ -1,4 +1,4 @@
-declare module "@balles.dev/esphome-native-api" {
+declare module "@2colors/esphome-native-api" {
     export type HelloResponse = {
         apiVersionMajor: number;
         apiVersionMinor: number;
@@ -394,6 +394,9 @@ declare module "@balles.dev/esphome-native-api" {
     export type SwitchCommandData = CommandData & {
         state: boolean;
     };
+    export type ServiceCommandData = CommandData & {
+        args: Array<Object>;
+    };
     export enum MediaPlayerCommand {
         Play = 0,
         Pause = 1,
@@ -459,6 +462,7 @@ declare module "@balles.dev/esphome-native-api" {
         selectCommandService(data: SelectCommandData): void;
         sirenCommandService(data: SirenCommandData): void;
         switchCommandService(data: SwitchCommandData): void;
+        serviceCommandService(data: ServiceCommandData): void;
         mediaPlayerCommandService(data: MediaPlayerCommandData): void;
 
         subscribeBluetoothAdvertisementService(): void;
